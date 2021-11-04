@@ -34,6 +34,7 @@ jobs:
 
     - name: Image Build 
       run: |
+        cd source
         docker build -t ${{ secrets.DOCKER_USERNAME }}/hello-pipeline:$GITHUB_RUN_NUMBER-SNAPSHOT .
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
         docker push ${{ secrets.DOCKER_USERNAME }}/hello-pipeline:$GITHUB_RUN_NUMBER-SNAPSHOT
