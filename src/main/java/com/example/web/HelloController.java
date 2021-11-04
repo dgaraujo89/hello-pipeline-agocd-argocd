@@ -14,7 +14,7 @@ public class HelloController {
 
     @GetMapping
     public String hello() {
-        return "Build "+ buildVersion;
+        return "Build "+ buildVersion +"!";
     }
 
 }
