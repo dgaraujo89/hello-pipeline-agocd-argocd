@@ -1,6 +1,6 @@
 FROM openjdk:latest
 
-WORKDIR app
+WORKDIR /app
 
 COPY artifacts/*.jar app.jar
 
